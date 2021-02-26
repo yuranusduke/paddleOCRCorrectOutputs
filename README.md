@@ -8,7 +8,7 @@ For us to output correct key-value in medical test sheets, I design simple algor
 ![img](./README/test.jpg)
 We can see in the figure, to detect from '结果', we have to find coordinates related to '结果' and key.
 As an example, let's use 平均血红蛋白浓度（MCHC） item, to detect 329 correctly. 
-First, we have to understand that if we find one item has coordinates $v$, that it will be geometrically illustrated like this
+First, we have to understand that if we find one item has coordinates \v\, that it will be geometrically illustrated like this
 ![img](./README/coor.png)
 
 Then, we will filter results. We filter both coulmns that contain '结果' via choosing the closer horizontal coordinates, after that we choose results that have the closer vertical coordinates. But how do we define 'closer'? I set threshold as `epsilon` in code, the larger value it is, the more results we get after filtering.
